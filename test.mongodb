@@ -1,0 +1,17 @@
+use('newCollection')
+
+db.student.insertMany([
+  {"name": "John", "age": 21},
+  {"name": "Mason", "age": 25},
+  {"name": "Norris", "age": 15},
+  {"name": "Wick", "age": 22},
+])
+
+
+use('newCollection')
+
+db.student.updateOne({
+  "name": "Mason"
+},{
+  $set: {"name": "Tiger"},
+})
